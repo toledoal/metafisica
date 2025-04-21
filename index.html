@@ -107,6 +107,17 @@
             .then(html => {
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(html, 'text/html');
+
+                // Get the style element
+                const styleElement = doc.querySelector('style');
+                if (styleElement) {
+                    // Add the styles to the document
+                    const style = document.createElement('style');
+                    style.textContent = styleElement.textContent;
+                    document.head.appendChild(style);
+                }
+
+                // Get the content
                 const content = doc.querySelector('body').innerHTML;
                 document.getElementById('content-container').innerHTML = content;
             })
