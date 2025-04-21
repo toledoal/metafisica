@@ -1,0 +1,74 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom typography */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+    color: #1a365d;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.prose p {
+    margin-bottom: 1.5em;
+    line-height: 1.7;
+}
+
+.prose ul,
+.prose ol {
+    margin-bottom: 1.5em;
+    padding-left: 1.5em;
+}
+
+.prose li {
+    margin-bottom: 0.5em;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+    .md\:flex {
+        display: none;
+    }
+}
+
+/* Form focus states */
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Print styles */
+@media print {
+
+    nav,
+    footer,
+    .no-print {
+        display: none;
+    }
+
+    .prose {
+        max-width: 100%;
+        padding: 0;
+    }
+}
