@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metafísica Cuálica - Alejandro Toledo Martínez</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css">
     <link rel="stylesheet" href="styles.css">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GHKYD3THD3"></script>
@@ -17,91 +18,97 @@
     </script>
 </head>
 
-<body class="bg-gray-50">
+<body>
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-xl font-semibold text-gray-800">Metafísica Cuálica</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#inicio" class="text-gray-600 hover:text-gray-900">Inicio</a>
-                    <a href="#contenido" class="text-gray-600 hover:text-gray-900">Contenido</a>
-                    <a href="#descargas" class="text-gray-600 hover:text-gray-900">Descargas</a>
-                    <a href="#contacto" class="text-gray-600 hover:text-gray-900">Contacto</a>
-                </div>
-            </div>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="menu">
+                <li class="menu-text">Metafísica Cuálica</li>
+            </ul>
         </div>
-    </nav>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#contenido">Contenido</a></li>
+                <li><a href="#descargas">Descargas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Hero Section -->
-    <header id="inicio" class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-32">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Metafísica Cuálica</h1>
-            <p class="text-xl md:text-2xl mb-12 font-light tracking-wide">Hacia una filosofía de la cualidad</p>
-            <a href="#contenido"
-                class="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">
-                Explorar Contenido
-            </a>
+    <header id="inicio" class="hero-section">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x align-center text-center">
+                <div class="cell">
+                    <h1 style="text-align: center;">Metafísica Cuálica</h1>
+                    <p style="color: white; font-size: 2.5rem;">Hacia una filosofía de la cualidad</p>
+                    <a href="#contenido" class="button large">Explorar Contenido</a>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main id="contenido" class="max-w-6xl mx-auto px-4 py-12">
-        <div class="prose prose-lg max-w-none">
-            <!-- Content from content.html will be loaded here -->
-            <div id="content-container"></div>
+    <main id="contenido" class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell">
+                <div id="content-container"></div>
+            </div>
         </div>
     </main>
 
     <!-- Downloads Section -->
-    <section id="descargas" class="bg-gray-100 py-12">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Descargas</h2>
-            <div class="text-center">
-                <a href="Metafísica cuálica.pdf" download
-                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
-                    Descargar PDF
-                </a>
+    <section id="descargas" class="downloads-section">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x align-center text-center">
+                <div class="cell">
+                    <a href="Metafísica cuálica.pdf" download class="button large">Descargar PDF</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Form -->
-    <section id="contacto" class="py-12">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Contacto</h2>
-            <form action="https://formspree.io/f/mjkwbpyz" method="POST" class="max-w-lg mx-auto">
-                <div class="mb-4">
-                    <label for="name" class="block text-gray-700 font-semibold mb-2">Nombre</label>
-                    <input type="text" id="name" name="name" required
-                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+    <section id="contacto" class="contact-section">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x align-center">
+                <div class="cell medium-8 large-6">
+                    <h2 class="text-center">Contacto</h2>
+                    <form action="https://formspree.io/f/mjkwbpyz" method="POST">
+                        <label>Nombre
+                            <input type="text" name="name" required>
+                        </label>
+                        <label>Email
+                            <input type="email" name="email" required>
+                        </label>
+                        <label>Mensaje
+                            <textarea name="message" rows="4" required></textarea>
+                        </label>
+                        <button type="submit" class="button expanded">Enviar Mensaje</button>
+                    </form>
                 </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-                    <input type="email" id="email" name="email" required
-                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-gray-700 font-semibold mb-2">Mensaje</label>
-                    <textarea id="message" name="message" rows="4" required
-                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                </div>
-                <button type="submit"
-                    class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
-                    Enviar Mensaje
-                </button>
-            </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p>&copy; 2024 Alejandro Toledo Martínez. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x align-center text-center">
+                <div class="cell">
+                    <p style="color: white;">&copy; 2025 Alejandro Toledo Martínez. Todos los derechos reservados.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Foundation JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"></script>
     <script>
+        $(document).foundation();
+
         // Load content from content.html
         fetch('content.html')
             .then(response => response.text())
@@ -110,7 +117,8 @@
             })
             .catch(error => {
                 console.error('Error loading content:', error);
-                document.getElementById('content-container').innerHTML = '<p>Error al cargar el contenido. Por favor, intente recargar la página.</p>';
+                document.getElementById('content-container').innerHTML =
+                    '<div class="callout alert">Error al cargar el contenido. Por favor, intente recargar la página.</div>';
             });
     </script>
 </body>
