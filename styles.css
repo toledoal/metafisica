@@ -120,12 +120,9 @@ body {
 .hero-section {
     position: relative;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    padding: 10rem 0 12rem;
+    padding: 5rem 0 6rem;
     color: white;
     overflow: hidden;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
 }
 
 .hero-section::before {
@@ -158,6 +155,7 @@ body {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 2rem;
+    text-align: center;
 }
 
 .hero-badge {
@@ -182,29 +180,30 @@ body {
     font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 600;
     line-height: 1.1;
-    margin: 0 0 1.5rem 0;
+    margin: 0 auto 1.5rem;
     color: white;
     letter-spacing: -0.03em;
+    text-align: center;
 }
 
 .hero-subtitle {
     font-size: clamp(1.375rem, 2.5vw, 1.875rem);
     font-weight: 300;
     line-height: 1.4;
-    margin: 0 0 1rem 0;
+    margin: 0 auto 1rem;
     color: rgba(255, 255, 255, 0.95);
     letter-spacing: 0.01em;
+    text-align: center;
 }
 
 .hero-description {
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.6;
-    margin: 0 0 3.5rem 0;
+    margin: 0 auto 3rem;
     color: rgba(255, 255, 255, 0.85);
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
 }
 
 .hero-buttons {
@@ -606,8 +605,7 @@ section {
     }
 
     .hero-section {
-        padding: 6rem 0 8rem;
-        min-height: auto;
+        padding: 4rem 0 5rem;
     }
 
     .hero-section .grid-container {
