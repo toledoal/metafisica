@@ -401,6 +401,43 @@ section {
     padding: 0 2rem;
 }
 
+.download-links-simple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.download-link-simple {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.download-link-simple::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.download-link-simple:hover {
+    color: var(--primary-dark);
+}
+
+.download-link-simple:hover::after {
+    width: 100%;
+}
+
 .download-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -638,6 +675,15 @@ section {
 
     .download-grid {
         grid-template-columns: 1fr;
+    }
+
+    .download-links-simple {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .separator {
+        display: none;
     }
 
     .book-links {
