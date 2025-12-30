@@ -313,6 +313,7 @@ section {
     margin: 0 0 1rem 0;
     letter-spacing: -0.02em;
     line-height: 1.2;
+    text-align: center;
 }
 
 .section-subtitle {
@@ -349,43 +350,42 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
-.book-link {
-    color: var(--primary);
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: var(--transition);
-    position: relative;
+.btn-book {
+    min-width: 180px;
+    padding: 1.125rem 2.5rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-md);
 }
 
-.book-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
+.btn-book.btn-primary {
     background: var(--primary);
-    transition: width 0.3s ease;
+    color: white;
+    border: 2px solid var(--primary);
 }
 
-.book-link:hover {
-    color: var(--primary-dark);
+.btn-book.btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
-.book-link:hover::after {
-    width: 100%;
+.btn-book.btn-secondary {
+    background: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
-.separator {
-    color: var(--text-light);
-    font-size: 1.25rem;
-    font-weight: 300;
+.btn-book.btn-secondary:hover {
+    background: var(--bg-alt);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 /* ============================================
@@ -642,11 +642,12 @@ section {
 
     .book-links {
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 1rem;
     }
 
-    .separator {
-        display: none;
+    .btn-book {
+        width: 100%;
+        min-width: auto;
     }
 
     #content-container {
@@ -672,6 +673,7 @@ section {
    PRINT STYLES
    ============================================ */
 @media print {
+
     .main-nav,
     .footer,
     .hero-section,
