@@ -734,3 +734,17 @@ section {
         padding: 0;
     }
 }
+/* ============================================
+   ARTÍCULO (texto principal, ya sin cargar content.html)
+   ============================================ */
+.articulo { font-family: 'Crimson Text', serif; font-size: 1.3rem; line-height: 1.7; color: var(--text); }
+.articulo h2 { font-size: clamp(1.7rem, 3.5vw, 2.2rem); line-height: 1.25; margin: 3.5rem 0 1rem; font-weight: 600; scroll-margin-top: 5rem; }
+.articulo h3 { font-size: 1.45rem; line-height: 1.3; margin: 2.2rem 0 .6rem; font-weight: 600; scroll-margin-top: 5rem; }
+.articulo p { margin: 0 0 1.1rem; }
+.articulo ul { margin: 0 0 1.2rem 1.4rem; }
+.articulo li { margin-bottom: .4rem; }
+.indice { border: 1px solid var(--border, #ddd); border-radius: 8px; padding: 1.5rem 1.75rem; margin-bottom: 2rem; font-family: 'Inter', sans-serif; font-size: 1rem; }
+.indice h2 { font-family: 'Crimson Text', serif; font-size: 1.5rem; margin: 0 0 .75rem; }
+.indice ol { margin: 0 0 0 1.2rem; list-style: none; }
+.indice li { margin: .35rem 0; }
+.indice a { color: inherit; }
