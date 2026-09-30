@@ -123,6 +123,28 @@ IDIOMAS = {
 }
 
 
+# Recuadro al inicio del texto: el cualo no es el quale de la filosofía de la mente.
+# es / en: palabras del capítulo 5 del libro («Advertencia terminológica»); fr / de: traducción con los términos fijados.
+QUALIA = {
+    "es": dict(t="Cualo, no qualia", fuente="— <em>Metafísica cuálica</em>, capítulo 5", p=[
+        "En filosofía de la mente, <em>qualia</em> suele implicar marcos representacionales y psicologistas que aquí <strong>no adoptamos</strong>. Nuestra pregunta no es la misma: no buscamos un «objeto mental privado» que la ciencia no pueda medir. Buscamos delimitar el estatuto ontológico del <em>aparecer</em> y su relación con la articulación (<em>logos</em>).",
+        "Un <strong>cualo</strong> es una unidad irreductible de aparecer vivido en el campo de la habencia, previa a la articulación conceptual, lingüística y proposicional.",
+        "Por eso decimos <em>cualo</em> y no <em>quale</em>: <em>qualia</em> aparece únicamente como término técnico histórico, cuando es inevitable, y siempre con esta advertencia."]),
+    "en": dict(t="Qualo, not qualia", fuente="— <em>Qualic Metaphysics</em>, chapter 5", p=[
+        "In philosophy of mind, <em>qualia</em> usually implies representational and psychologistic frameworks that here we <strong>do not adopt</strong>. Our question is not the same: we are not looking for a “private mental object” that science cannot measure. We are looking to delimit the ontological status of <em>appearing</em> and its relation to articulation (<em>logos</em>).",
+        "A <strong>qualo</strong> is an irreducible unit of lived appearing in the field of habence, prior to conceptual, linguistic and propositional articulation.",
+        "That is why we say <em>qualo</em> and not <em>quale</em>: <em>qualia</em> appears solely as a historical technical term when unavoidable, and always with this warning."]),
+    "fr": dict(t="Cualo, et non qualia", fuente="— d’après le livre, chapitre\u00a05", p=[
+        "En philosophie de l’esprit, les <em>qualia</em> impliquent d’ordinaire des cadres représentationnels et psychologistes que nous <strong>n’adoptons pas</strong> ici. Notre question n’est pas la même\u202f: nous ne cherchons pas un «\u00a0objet mental privé\u00a0» que la science ne pourrait pas mesurer. Nous cherchons à délimiter le statut ontologique de l’<em>apparaître</em> et son rapport à l’articulation (<em>logos</em>).",
+        "Un <strong>cualo</strong> est une unité irréductible d’apparaître vécu dans le champ de l’habence, antérieure à l’articulation conceptuelle, linguistique et propositionnelle.",
+        "C’est pourquoi nous disons <em>cualo</em> et non <em>quale</em>\u00a0: le terme <em>qualia</em> n’apparaît que comme terme technique historique, lorsqu’il est inévitable, et toujours avec cet avertissement."]),
+    "de": dict(t="Qualo, nicht Qualia", fuente="— nach dem Buch, Kapitel 5", p=[
+        "In der Philosophie des Geistes impliziert <em>Qualia</em> meist repräsentationale und psychologistische Rahmen, die wir hier <strong>nicht übernehmen</strong>. Unsere Frage ist nicht dieselbe: Wir suchen kein „privates mentales Objekt“, das die Wissenschaft nicht messen kann. Wir wollen den ontologischen Status des <em>Erscheinens</em> und sein Verhältnis zur Artikulation (<em>Logos</em>) bestimmen.",
+        "Ein <strong>Qualo</strong> ist eine irreduzible Einheit gelebten Erscheinens im Feld der Habenz, vor jeder begrifflichen, sprachlichen und propositionalen Artikulation.",
+        "Darum sagen wir <em>Qualo</em> und nicht <em>Quale</em>: <em>Qualia</em> erscheint nur als historischer Fachbegriff, wo es unvermeidlich ist, und immer mit diesem Hinweis."]),
+}
+
+
 def url(cod):
     d = IDIOMAS[cod]["dir"]
     return f"{SITIO}/{d + '/' if d else ''}"
@@ -251,6 +273,10 @@ def pagina(cod, langs):
     <!-- Main Content -->
     <main id="contenido">
         <article id="content-container" class="articulo">
+            <aside class="aviso-qualia" id="{"qualo-qualia"}">
+                <h2>{QUALIA[cod]["t"]}</h2>
+{"".join(f"                <p>{x}</p>" + chr(10) for x in QUALIA[cod]["p"])}                <p class="aviso-fuente">{QUALIA[cod]["fuente"]}</p>
+            </aside>
             <nav class="indice" aria-label="{e(L["indice"])}">
                 <h2>{e(L["indice"])}</h2>
                 <ol>{toc}</ol>
