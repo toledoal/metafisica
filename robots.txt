@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /contenido/
+Disallow: /build.py
 
 Sitemap: https://qualicmetaphysics.org/sitemap.xml

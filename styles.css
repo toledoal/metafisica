@@ -748,3 +748,9 @@ section {
 .indice ol { margin: 0 0 0 1.2rem; list-style: none; }
 .indice li { margin: .35rem 0; }
 .indice a { color: inherit; }
+
+/* selector de idioma */
+.lang-switch { display: flex; gap: .35rem; margin-left: 1rem; font-family: 'Inter', sans-serif; font-size: .8rem; font-weight: 600; }
+.lang-switch a, .lang-switch .lang-actual { padding: .25rem .45rem; border: 1px solid var(--border); border-radius: 4px; color: var(--text); text-decoration: none; }
+.lang-switch .lang-actual { background: var(--text); color: #fff; border-color: var(--text); }
+.lang-switch a:hover { border-color: var(--text); }
